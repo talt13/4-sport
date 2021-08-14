@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport</title>
+    <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/normalize.css ">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+           <img class="header__logo" src="/css/images/logo.svg" alt="logo">
+            <div class="header__menu">
+                <a href="#announcement" class="menu__item">Мероприятия</a>
+                <a href="#timetable" class="menu__item">Расписание</a>
+                <a href="#company" class="menu__item">О нас</a>
+            </div>
+            <div class="header__contact">
+                <div class="icon">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <div class="header__bottom-text">
+                <h1 class="header__bottom-title">Здоровая осанка</h1>
+                <h2 class="header__bottom-subtitle">yпражнения, необходимые именно тебе
+                    <span> <br> мир без боли в спине и шее</span>
+                </h2>
+                <button class="header__bottom-btn">Узнать подробнее</button>
+               <div class="header__arrow"> <a href="#" class="arrow"><img src="/css/images/arrow.svg" alt=""></a></div>
+            </div>
+            <div class="header__bottom-img">
+            <img class="header__bottom-bg" src="/css/images/Posture.jpg" alt=""></div>
+        </div>
+    </header>
+    <div class="container-two">
+        <div class="new">
+            <div class="news-title">
+                <h2 class="new__title">Ближайшие события</h2>
+            </div>
+            <div class="announcement" id="announcement">
+                <div class="announcement__1">
+                    <a class="announcenent__bg">
+                        <p class="announcement__data">15.08</p>
+                        <h3 class="announcement__title">Йога, как стиль жизни</h3>
+                        <img class="announcement__img" src="/css/images/announcement1.jpg" alt="" >
+                        <div><button class="announcement__btn">Вебинар</button></div>
+                    </a>  
+                </div>  
+                <div class="announcement__2">
+                    <a class="announcenent__bg">
+                        <p class="announcement__data">19.08 - 24.08</p>
+                        <h3 class="announcement__title">Марафон по питанию</h3>
+                        <img class="announcement__img" src="/css/images/announcement2.jpg" alt="" >
+                        <div><button class="announcement__btn">Марафон</button></div>
+                    </a>  
+                </div>  
+                <div class="announcement__3">
+                    <a class="announcenent__bg">
+                        <p class="announcement__data">27.08</p>
+                        <h3 class="announcement__title">Комплекс упражнений для поясницы и плечевого пояса</h3>
+                        <img class="announcement__img" src="/css/images/announcement3.jpg" alt="" >
+                        <div><button class="announcement__btn">Вебинар</button></div>
+                    </a>  
+                </div>  
+                </div>
+            </div>
+        </div>
+        <div class="container_three">
+            <div class="timetable" id="timetable">
+                <div class="timetable__header">
+                    <div class="timetable__text">
+                        <h2 class="timetable__text">Расписание тренировок</h2>
+                        <h2 class="timetable__text">22-27 августа</h2>
+                    </div>
+                </div>
+                <div class="timetable__main " >
+                    <div class="timetable__main-row">
+                        <div class="timetable__main-item one">
+                            <p class="timetable__main-text">22 августа, 10:00</p>
+                            <img class="timetable__main-img" src="/css/images/body.svg" alt="">
+                            <h3 class="timetable__main-title">Функциональный тренинг</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+                        </div>
+                        <div class="timetable__main-item timetable__main-item--width-2 two">
+                            <p class="timetable__main-text">23 августа, 10:00</p>
+                            <img class="timetable__main-img" src="/css/images/jump.svg" alt="">
+                            <h3 class="timetable__main-title">Силовой микс</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+                        </div>
+                        <div class="timetable__main-item timetable__main-item--width-3 three">
+                            <p class="timetable__main-text">24 августа, 11:00</p>
+                            <img class="timetable__main-img" src="/css/images/heart.svg" alt="">
+                            <h3 class="timetable__main-title">Дыхательные практики</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+                        </div>
+                    </div>
+                    <div class="timetable__main-row2">
+                        <div class="timetable__main-item timetable__main-item--width-2 four">
+                            <p class="timetable__main-text">25 августа, 10:00</p>
+                            <img class="timetable__main-img" src="/css/images/dumbbell.svg" alt="">
+                            <h3 class="timetable__main-title">L.A.B.</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+
+                        </div>
+                        <div class="timetable__main-item five">
+                            <p class="timetable__main-text">26 августа, 10:00</p>
+                            <img class="timetable__main-img" src="/css/images/weight.svg" alt="">
+                            <h3 class="timetable__main-title">Комплексная разминка</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+
+                        </div>
+                        <div class="timetable__main-item timetable__main-item--width-3 six">
+                            <p class="timetable__main-text">27 августа, 12:00</p>
+                            <img class="timetable__main-img" src="/css/images/bottle.svg" alt="">
+                            <h3 class="timetable__main-title">Body sculpt</h3>
+                            <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container__four">
+            <div class="company" id="company">
+                <div class="company__about">
+                    <div class="company__about-text">
+                        <h3>О нас</h3>
+                        <p>Наша команда является одной из немногих,<br> кто предлагает услуги онлайн.<br> Будьте  с нами Вы сдклаете шаг навстречу<br>здоровоме телу.</p>
+                        <button class="company__about-btn">Записаться</button>
+                    </div>
+                    <div class="company__about-img">
+                        <img src="/css/images/company.jpg" alt="">
+                    </div>
+                </div>
+                <div class="company__main">
+                    <div class="company__item">
+                        <h3>Экономия времени </h3>
+                        <p>Не нужно тратить время на дорогу</p>
+                    </div>
+                    <div class="company__item">
+                        <h3>Индивидуальный подход</h3>
+                        <p>Внимание тренера пренадлежит только вам</p>
+                    </div>
+                    <div class="company__item">
+                        <h3>Экономия денег</h3>
+                        <p>Средняя цена одной тренировки - 700₽</p>
+                    </div>
+                    <div class="company__item">
+                        <h3>Опытные тренера</h3>
+                        <p>Стаж работы в нашей команде - от 5 лет</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <img class="footer__logo" src="/css/images/logo.svg" alt="logo">
+                     <div class="footer__menu">
+                         <div class="menu__item">Мероприятия</div>
+                         <div class="menu__item">Расписание</div>
+                         <div class="menu__item">О нас</div>
+                     </div>
+                     <div class="footer__mail">
+                         <a href="mailto:info@freefit.com">info@freefit.com</a>
+                     </div>
+                     <div class="footer__contact">
+                         <div class="icon">
+                             <a href="#"><i class="fab fa-instagram"></i></a>
+                         </div>
+                         <div class="icon">
+                             <a href="#"><i class="fab fa-whatsapp"></i></a>
+                         </div>
+                         <div class="icon">
+                             <a href="#"><i class="fab fa-facebook-square"></i></a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="confidention">
+                    <div><p>2021, Все права защищены</p></div>
+                 </div>
+            </div>
+        </div>
+
+        
+        <script src="/js/app.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
+</body>
+</html>
