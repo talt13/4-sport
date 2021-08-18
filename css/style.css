@@ -14,7 +14,7 @@ li{
 }
    
 .container{
-    margin: 10px;
+    margin: 10px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,8 +64,8 @@ li{
 .header__bottom{
         display: flex;
         padding: 0 10px;
-       
-        margin: 60px auto 0;
+        max-width: 1220px;
+        margin: 60px 60px 0;
 }
 .header__bottom-img{
     overflow: hidden;
@@ -649,7 +649,7 @@ li{
     .header__bottom-img{
         max-height: 600px;
         align-self: center;
-        margin: 35px 0 0 60px;
+        margin: 35px 0 ;
     }
     .icon a:focus{
         color:#fbf138;
