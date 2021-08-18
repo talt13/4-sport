@@ -64,7 +64,7 @@ li{
 .header__bottom{
         display: flex;
         padding: 0 10px;
-        max-width: 1220px;
+    
         margin: 60px 60px 0;
 }
 .header__bottom-img{
@@ -243,6 +243,7 @@ li{
     background: linear-gradient(to bottom, #6F706B, #e5e5e5 );
 }
 .new{
+    min-width: 1220px;
     max-width:1220px;
     margin: 0 auto;
 }
@@ -649,7 +650,7 @@ li{
     .header__bottom-img{
         max-height: 600px;
         align-self: center;
-        margin: 35px 0 ;
+        margin: 35px 0;
     }
     .icon a:focus{
         color:#fbf138;
