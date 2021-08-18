@@ -64,7 +64,7 @@ li{
 .header__bottom{
         display: flex;
         padding: 0 10px;
-        max-width: 1220px;
+       
         margin: 60px auto 0;
 }
 .header__bottom-img{
@@ -88,7 +88,6 @@ li{
     min-width: 650px;
     font-size: 48px;
     line-height: 60px;
-    justify-content: center;
     font-weight: 700;
 }
 .header__bottom-subtitle{
@@ -585,7 +584,7 @@ li{
 .menu__btn{
     display: none;
 }
-@media(min-width:720px){
+@media(max-width:720px){
     .menu-btn{
         display: block;
         width: 35px;
