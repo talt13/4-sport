@@ -585,7 +585,7 @@ li{
 .menu__btn{
     display: none;
 }
-@media(max-width:720px){
+@media(min-width:720px){
     .menu-btn{
         display: block;
         width: 35px;
