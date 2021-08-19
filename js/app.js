@@ -1,15 +1,31 @@
-$(function(){
-	$(".menu").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
-	});
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
+
+$('#header__bottom-btn')
+    .click(function(){
+        $('#popup__container').fadeIn();
+   });
+
+    $('#popup__container').click(function(event){
+        if(event.target == this) {
+            $(this).fadeOut();
+        }
+    })
+
+$('#company__about-btn')
+    .click(function(){
+        $('#popup__container').fadeIn();
+   });
+
+    $('#popup__container').click(function(event){
+        if(event.target == this) {
+            $(this).fadeOut();
+        }
+    })

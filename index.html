@@ -34,13 +34,29 @@
             </div>
         </div>
 
+
+        <div class="popup__container" id="popup__container">
+            <form action="send.php">
+                <div class="form">
+                <div class="form-title">
+                    <h3>Заявка на участие <br>в марафоне "Здоровая спина"</h3>
+                    <p>Заполните все поля, и мы пришлем информацию <br>в ближайшее время</p>
+                    <input class="form__input" type="name" required="required" placeholder="Ваше Имя">
+                    <input class="form__input" type="email" required="required" placeholder="Ваш е-mail">
+                    <input type="submit" class="form-btn">Отправить
+                    <div class="close-btn">&times;</div>
+                </div>
+             </div>
+            </form>
+        </div>
+
         <div class="header__bottom">
             <div class="header__bottom-text">
                 <h1 class="header__bottom-title">Здоровая осанка</h1>
                 <h2 class="header__bottom-subtitle">yпражнения, необходимые<br> именно тебе
                     <span> <br> мир без боли в спине и шее</span>
                 </h2>
-                <button class="header__bottom-btn">Узнать подробнее</button>
+                <button class="header__bottom-btn" id="header__bottom-btn">Узнать подробнее</button>
                <div class="header__arrow"> <a href="#" class="arrow"><img src="./css/images/arrow.svg" alt=""></a></div>
             </div>
             <div class="header__bottom-img">
@@ -140,7 +156,7 @@
                     <div class="company__about-text">
                         <h3>О нас</h3>
                         <p>Наша команда является одной из немногих,<br> кто предлагает услуги онлайн.<br> Будьте  с нами Вы сдклаете шаг навстречу<br>здоровоме телу.</p>
-                        <button class="company__about-btn">Записаться</button>
+                        <button class="company__about-btn" id="company__about-btn">Записаться</button>
                     </div>
                     <div class="company__about-img">
                         <img src="./css/images/company.jpg" alt="">
@@ -196,8 +212,8 @@
         </div>
 
         
+        
+        <script src="/js/jquery-3.6.0.min.js"></script>
         <script src="/js/app.js"></script>
-        <script src="/js/jquery.fancybox.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"> </script>
 </body>
 </html>

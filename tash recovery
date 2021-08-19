@@ -1,0 +1,389 @@
+[1mdiff --git a/css/images/popup-background.png b/css/images/popup-background.png[m
+[1mdeleted file mode 100644[m
+[1mindex d3b1534..0000000[m
+Binary files a/css/images/popup-background.png and /dev/null differ
+[1mdiff --git a/css/style.css b/css/style.css[m
+[1mindex 7798f77..74b0e1a 100644[m
+[1m--- a/css/style.css[m
+[1m+++ b/css/style.css[m
+[36m@@ -14,7 +14,7 @@[m [mli{[m
+ }[m
+    [m
+ .container{[m
+[31m-    margin: 10px auto;[m
+[32m+[m[32m    margin: 10px;[m
+     display: flex;[m
+     align-items: center;[m
+     justify-content: space-between;[m
+[36m@@ -64,8 +64,8 @@[m [mli{[m
+ .header__bottom{[m
+         display: flex;[m
+         padding: 0 10px;[m
+[31m-    [m
+[31m-        margin: 60px 60px 0;[m
+[32m+[m[32m        max-width: 1220px;[m
+[32m+[m[32m        margin: 60px auto 0;[m
+ }[m
+ .header__bottom-img{[m
+     overflow: hidden;[m
+[36m@@ -88,6 +88,7 @@[m [mli{[m
+     min-width: 650px;[m
+     font-size: 48px;[m
+     line-height: 60px;[m
+[32m+[m[32m    justify-content: center;[m
+     font-weight: 700;[m
+ }[m
+ .header__bottom-subtitle{[m
+[36m@@ -147,7 +148,7 @@[m [mli{[m
+     left: 0;[m
+     width: 100%;[m
+     height: 100%;[m
+[31m-    background-image: url(css/images/popup-background.PNG);[m
+[32m+[m[32m    background-image: url(../css/images/popup-background.png);[m
+     z-index: 10;[m
+ [m
+ }[m
+[36m@@ -243,7 +244,6 @@[m [mli{[m
+     background: linear-gradient(to bottom, #6F706B, #e5e5e5 );[m
+ }[m
+ .new{[m
+[31m-    min-width: 1220px;[m
+     max-width:1220px;[m
+     margin: 0 auto;[m
+ }[m
+[36m@@ -273,7 +273,7 @@[m [mli{[m
+ 	height: 600px;[m
+ 	position: absolute;   [m
+     transition:.4s;[m
+[31m-	background: url(css/images/announcement1.JPEG) 0 0 no-repeat;[m
+[32m+[m	[32mbackground: url(../css/images/announcement1.jpg) 0 0 no-repeat;[m
+ 	z-index: -100;[m
+ }[m
+ .announcenent__bg:hover:after {[m
+[36m@@ -650,7 +650,7 @@[m [mli{[m
+     .header__bottom-img{[m
+         max-height: 600px;[m
+         align-self: center;[m
+[31m-        margin: 35px 0;[m
+[32m+[m[32m        margin: 35px 0 0 60px;[m
+     }[m
+     .icon a:focus{[m
+         color:#fbf138;[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 4db38bf..eb82706 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -14,7 +14,33 @@[m
+ <body>[m
+     <header class="header">[m
+         <div class="container">[m
+[31m-           <img class="header__logo" src="css/images/logo.svg" alt="logo">[m
+[32m+[m[32m            <!-- форма -->[m
+[32m+[m
+[32m+[m[41m                        [m
+[32m+[m[32m            <div class="popup__container" id="popup__container">[m
+[32m+[m[32m                <form action="send.php" method="POST">[m
+[32m+[m[32m                    <div class="form" id="form">[m
+[32m+[m[41m                    [m
+[32m+[m[32m                            <div class="form-title">[m
+[32m+[m[32m                                <h3>Заявка на участие <br>в марафоне «Здоровая осанка»</h3>[m
+[32m+[m[32m                                <p>Заполните все поля, и мы пришлем информацию в ближайшее время</p>[m
+[32m+[m[32m                                <input class="form__input" name="name" required="required" type="name" placeholder="Ваше имя">[m
+[32m+[m[32m                                <input class="form__input" name="email" required="required" type="e-mail" placeholder="Ваш e-mail">[m
+[32m+[m[32m                                                          <!-- capcha  -->[m
+[32m+[m[32m                                            <!-- <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>[m
+[32m+[m[32m                                            <div class="text-danger" id="recaptchaError"></div> -->[m
+[32m+[m[32m                                <input class="form-btn" type="submit">Отправить</input>[m
+[32m+[m[32m                                    <div class="close-btn" id="close">&times;</div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                          [m
+[32m+[m[41m                            [m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </form>[m[41m   [m
+[32m+[m[32m            </div>[m[41m       [m
+[32m+[m[41m               [m
+[32m+[m[41m                [m
+[32m+[m[32m              <!-- \форма -->[m
+[32m+[m[32m           <img class="header__logo" src="../css/images/logo.svg" alt="logo">[m
+            <div class="menu-btn"></div>[m
+             <ul class="header__menu">[m
+                <li class="menu"><a href="#announcement" class="menu__item">Мероприятия</a></li> [m
+[36m@@ -37,14 +63,16 @@[m
+         <div class="header__bottom">[m
+             <div class="header__bottom-text">[m
+                 <h1 class="header__bottom-title">Здоровая осанка</h1>[m
+[31m-                <h2 class="header__bottom-subtitle">yпражнения, необходимые<br> именно тебе[m
+[32m+[m[32m                <h2 class="header__bottom-subtitle">Упражнения, необходимые именно тебе[m
+                     <span> <br> мир без боли в спине и шее</span>[m
+                 </h2>[m
+[31m-                <button class="header__bottom-btn">Узнать подробнее</button>[m
+[31m-               <div class="header__arrow"> <a href="#" class="arrow"><img src="./css/images/arrow.svg" alt=""></a></div>[m
+[32m+[m[32m                <button class="header__bottom-btn" id="header__bottom-btn">Узнать подробнее</button>[m
+[32m+[m[32m               <div class="header__arrow"> <a href="#" class="arrow"><img src="../css/images/arrow.svg" alt=""></a></div>[m
+             </div>[m
+             <div class="header__bottom-img">[m
+[31m-            <img class="header__bottom-bg" src="./css/images/Posture.jpg" alt=""></div>[m
+[32m+[m[32m                <img class="header__bottom-bg" src="../css/images/Posture.JPG" alt="">[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+         </div>[m
+     </header>[m
+     <div class="container-two">[m
+[36m@@ -57,7 +85,7 @@[m
+                     <a class="announcenent__bg">[m
+                         <p class="announcement__data">15.08</p>[m
+                         <h3 class="announcement__title">Йога, как стиль жизни</h3>[m
+[31m-                        <img class="announcement__img" src="./css/images/announcement1.jpg" alt="" >[m
+[32m+[m[32m                        <img class="announcement__img" src="../css/images/announcement1.JPG" alt="" >[m
+                         <div><button class="announcement__btn">Вебинар</button></div>[m
+                     </a>  [m
+                 </div>  [m
+[36m@@ -65,7 +93,7 @@[m
+                     <a class="announcenent__bg">[m
+                         <p class="announcement__data">19.08 - 24.08</p>[m
+                         <h3 class="announcement__title">Марафон по питанию</h3>[m
+[31m-                        <img class="announcement__img" src="./css/images/announcement2.jpg" alt="" >[m
+[32m+[m[32m                        <img class="announcement__img" src="../css/images/announcement2.jpg" alt="" >[m
+                         <div><button class="announcement__btn">Марафон</button></div>[m
+                     </a>  [m
+                 </div>  [m
+[36m@@ -73,7 +101,7 @@[m
+                     <a class="announcenent__bg">[m
+                         <p class="announcement__data">27.08</p>[m
+                         <h3 class="announcement__title">Комплекс упражнений для поясницы и плечевого пояса</h3>[m
+[31m-                        <img class="announcement__img" src="./css/images/announcement3.jpg" alt="" >[m
+[32m+[m[32m                        <img class="announcement__img" src="../css/images/announcement3.JPG" alt="" >[m
+                         <div><button class="announcement__btn">Вебинар</button></div>[m
+                     </a>  [m
+                 </div>  [m
+[36m@@ -92,19 +120,19 @@[m
+                     <div class="timetable__main-row">[m
+                         <div class="timetable__main-item one">[m
+                             <p class="timetable__main-text">22 августа, 10:00</p>[m
+[31m-                            <img class="timetable__main-img" src="css/images/body.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/body.svg" alt="">[m
+                             <h3 class="timetable__main-title">Функциональный тренинг</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+                         </div>[m
+                         <div class="timetable__main-item timetable__main-item--width-2 two">[m
+                             <p class="timetable__main-text">23 августа, 10:00</p>[m
+[31m-                            <img class="timetable__main-img" src="css/images/jump.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/jump.svg" alt="">[m
+                             <h3 class="timetable__main-title">Силовой микс</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+                         </div>[m
+                         <div class="timetable__main-item timetable__main-item--width-3 three">[m
+                             <p class="timetable__main-text">24 августа, 11:00</p>[m
+[31m-                            <img class="timetable__main-img" src="css/images/heart.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/heart.svg" alt="">[m
+                             <h3 class="timetable__main-title">Дыхательные практики</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+                         </div>[m
+[36m@@ -112,21 +140,21 @@[m
+                     <div class="timetable__main-row2">[m
+                         <div class="timetable__main-item timetable__main-item--width-2 four">[m
+                             <p class="timetable__main-text">25 августа, 10:00</p>[m
+[31m-                            <img class="timetable__main-img" src=" css/images/dumbbell.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/dumbbell.svg" alt="">[m
+                             <h3 class="timetable__main-title">L.A.B.</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+ [m
+                         </div>[m
+                         <div class="timetable__main-item five">[m
+                             <p class="timetable__main-text">26 августа, 10:00</p>[m
+[31m-                            <img class="timetable__main-img" src="css/images/weight.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/weight.svg" alt="">[m
+                             <h3 class="timetable__main-title">Комплексная разминка</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+ [m
+                         </div>[m
+                         <div class="timetable__main-item timetable__main-item--width-3 six">[m
+                             <p class="timetable__main-text">27 августа, 12:00</p>[m
+[31m-                            <img class="timetable__main-img" src="css/images/bottle.svg" alt="">[m
+[32m+[m[32m                            <img class="timetable__main-img" src="../css/images/bottle.svg" alt="">[m
+                             <h3 class="timetable__main-title">Body sculpt</h3>[m
+                             <p class="timetable__main-description">Упражнения помогут улучшить осанку и привести в норму<br> мышечный тонус</p>[m
+                         </div>[m
+[36m@@ -140,10 +168,10 @@[m
+                     <div class="company__about-text">[m
+                         <h3>О нас</h3>[m
+                         <p>Наша команда является одной из немногих,<br> кто предлагает услуги онлайн.<br> Будьте  с нами Вы сдклаете шаг навстречу<br>здоровоме телу.</p>[m
+[31m-                        <button class="company__about-btn">Записаться</button>[m
+[32m+[m[32m                        <button class="company__about-btn" id="company__about-btn">Записаться</button>[m
+                     </div>[m
+                     <div class="company__about-img">[m
+[31m-                        <img src="./css/images/company.jpg" alt="">[m
+[32m+[m[32m                        <img src="../css/images/company.JPG" alt="">[m
+                     </div>[m
+                 </div>[m
+                 <div class="company__main">[m
+[36m@@ -168,7 +196,7 @@[m
+ [m
+             <div class="footer">[m
+                 <div class="container">[m
+[31m-                    <img class="footer__logo" src="css/images/logo.svg" alt="logo">[m
+[32m+[m[32m                    <img class="footer__logo" src="../css/images/logo.svg" alt="logo">[m
+                      <div class="footer__menu">[m
+                          <div class="menu__item">Мероприятия</div>[m
+                          <div class="menu__item">Расписание</div>[m
+[36m@@ -194,10 +222,9 @@[m
+                  </div>[m
+             </div>[m
+         </div>[m
+[31m-[m
+[31m-        [m
+[32m+[m[32m<!--[m[41m [m
+[32m+[m[32m        <script src='https://www.google.com/recaptcha/api.js'></script> -->[m
+[32m+[m[32m        <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>[m
+         <script src="/js/app.js"></script>[m
+[31m-        <script src="/js/jquery.fancybox.js"></script>[m
+[31m-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"> </script>[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/js/app.js b/js/app.js[m
+[1mindex c5aacbf..0469f39 100644[m
+[1m--- a/js/app.js[m
+[1m+++ b/js/app.js[m
+[36m@@ -1,15 +1,85 @@[m
+[32m+[m[32mdocument.querySelectorAll('a[href^="#"]').forEach(anchor => {[m
+[32m+[m[32m    anchor.addEventListener('click', function (e) {[m
+[32m+[m[32m        e.preventDefault();[m
+[32m+[m
+[32m+[m[32m        document.querySelector(this.getAttribute('href')).scrollIntoView({[m
+[32m+[m[32m            behavior: 'smooth'[m
+[32m+[m[32m        });[m
+[32m+[m[32m    });[m
+[32m+[m[32m});[m
+[32m+[m
+[32m+[m
+ $(function(){[m
+[31m-	$(".menu").on("click","a", function (event) {[m
+[31m-		//отменяем стандартную обработку нажатия по ссылке[m
+[31m-		event.preventDefault();[m
+[31m-[m
+[31m-		//забираем идентификатор бока с атрибута href[m
+[31m-		var id  = $(this).attr('href'),[m
+[31m-[m
+[31m-		//узнаем высоту от начала страницы до блока на который ссылается якорь[m
+[31m-			top = $(id).offset().top;[m
+[31m-		[m
+[31m-		//анимируем переход на расстояние - top за 1500 мс[m
+[31m-		$('body,html').animate({scrollTop: top}, 1500);[m
+[31m-	});[m
+[32m+[m[32m    $('#header__bottom-btn')[m
+[32m+[m[32m        .click(function(){[m
+[32m+[m[32m            $('#popup__container').fadeIn();[m
+[32m+[m[32m        });[m
+[32m+[m[32m        $('#popup__container').click(function(event){[m
+[32m+[m[32m            if(event.target == this){[m
+[32m+[m[32m                $(this).fadeOut();[m
+[32m+[m[32m            }[m
+[32m+[m[32m        })[m
+[32m+[m[32m        $('#close').click(function(){[m
+[32m+[m[32m            $('#popup__container').fadeOut();[m
+[32m+[m[32m        })[m
+ });[m
+[32m+[m
+[32m+[m[32m$(function(){[m
+[32m+[m[32m    $('#company__about-btn')[m
+[32m+[m[32m        .click(function(){[m
+[32m+[m[32m            $('#popup__container').fadeIn();[m
+[32m+[m[32m        });[m
+[32m+[m[32m        $('#popup__container').click(function(event){[m
+[32m+[m[32m            if(event.target == this){[m
+[32m+[m[32m                $(this).fadeOut();[m
+[32m+[m[32m            }[m
+[32m+[m[32m        })[m
+[32m+[m[32m        $('#close').click(function(){[m
+[32m+[m[32m            $('#popup__container').fadeOut();[m
+[32m+[m[32m        })[m
+[32m+[m[32m});[m
+[32m+[m
+[32m+[m[32mfunction ValidateEmail(uemail){[m
+[32m+[m[32m    var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;[m
+[32m+[m[32m    if(uemail.value.match(mailformat)){[m
+[32m+[m[32m        return true;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        else{[m
+[32m+[m[32m            alert("You have entered an invalid email address!");[m
+[32m+[m[32m            uemail.focus();[m
+[32m+[m[32m        return false;[m
+[32m+[m[32m        }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m// // capcha[m
+[32m+[m[32m// // Работа с виджетом recaptcha[m
+[32m+[m[32m// // 1. Получить ответ гугл капчи[m
+[32m+[m[32m// var captcha = grecaptcha.getResponse();[m
+[32m+[m
+[32m+[m[32m// // 2. Если ответ пустой, то выводим сообщение о том, что пользователь не прошёл тест.[m
+[32m+[m[32m// // Такую форму не будем отправлять на сервер.[m
+[32m+[m[32m// if (!captcha.length) {[m
+[32m+[m[32m//   // Выводим сообщение об ошибке[m
+[32m+[m[32m//   $('#recaptchaError').text('* Вы не прошли проверку "Я не робот"');[m
+[32m+[m[32m// } else {[m
+[32m+[m[32m//   // получаем элемент, содержащий капчу[m
+[32m+[m[32m//   $('#recaptchaError').text('');[m
+[32m+[m[32m// }[m
+[32m+[m
+[32m+[m[32m// // 3. Если форма валидна и длина капчи не равно пустой строке, то отправляем форму на сервер (AJAX)[m
+[32m+[m[32m// if ((formValid) && (captcha.length)) {[m
+[32m+[m
+[32m+[m[32m//   // добавить в formData значение 'g-recaptcha-response'=значение_recaptcha[m
+[32m+[m[32m//   formData.append('g-recaptcha-response', captcha);[m
+[32m+[m
+[32m+[m[32m// }[m
+[32m+[m
+[32m+[m[32m// // 4. Если сервер вернул ответ error, то делаем следующее...[m
+[32m+[m[32m// // Сбрасываем виджет reCaptcha[m
+[32m+[m[32m// grecaptcha.reset();[m
+[32m+[m[32m// // Если существует свойство msg у объекта $data, то...[m
+[32m+[m[32m// if ($data.msg) {[m
+[32m+[m[32m//   // вывести её в элемент у которого id=recaptchaError[m
+[32m+[m[32m//   $('#recaptchaError').text($data.msg);[m
+[32m+[m[32m// }[m
+\ No newline at end of file[m
+[1mdiff --git a/js/send.php b/js/send.php[m
+[1mdeleted file mode 100644[m
+[1mindex cb76ebd..0000000[m
+[1m--- a/js/send.php[m
+[1m+++ /dev/null[m
+[36m@@ -1,35 +0,0 @@[m
+[31m-<?php[m
+[31m-/* Здесь проверяется существование переменных */[m
+[31m-if (isset($_POST['name'])) {$phone = $_POST['name'];}[m
+[31m-if (isset($_POST['phone'])) {$name = $_POST['phone'];}[m
+[31m- [m
+[31m-/* Сюда впишите свою эл. почту */[m
+[31m-$myaddres  = "tagalkina.99@yandex .ru"; // кому отправляем[m
+[31m- [m
+[31m-/* А здесь прописывается текст сообщения, \n - перенос строки */[m
+[31m-$mes = "Тема: Заказ обратного звонка!\nТелефон: $phone\nИмя: $name";[m
+[31m- [m
+[31m-/* А эта функция как раз занимается отправкой письма на указанный вами email */[m
+[31m-$sub='Заказ'; //сабж[m
+[31m-$email='Заказ обратного звонка'; // от кого[m
+[31m-$send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");[m
+[31m- [m
+[31m-ini_set('short_open_tag', 'On');[m
+[31m-header('Refresh: 3; URL=index.html');[m
+[31m-?>[m
+[31m-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">[m
+[31m-<meta http-equiv="refresh" content="3; url=index.html">[m
+[31m-<title>Спасибо! Мы свяжемся с вами!</title>[m
+[31m-<meta name="generator">[m
+[31m-<script type="text/javascript">[m
+[31m-setTimeout('location.replace("/index.html")', 3000);[m
+[31m-/*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/[m
+[31m-</script> [m
+[31m-</head>[m
+[31m-<body>[m
+[31m-<h1>Спасибо! Мы свяжемся с вами!</h1>[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
